@@ -1,0 +1,5 @@
+-type=Status
+-json
+-yaml
+-sql
+-trimprefix=Status
