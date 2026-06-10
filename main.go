@@ -90,7 +90,7 @@ func main() {
 	}
 
 	// Build command string
-	cmdStr := buildCommandString(types, outputName)
+	cmdStr := buildCommandString(types)
 
 	// Generate code
 	data := TemplateData{
@@ -110,7 +110,7 @@ func main() {
 }
 
 // buildCommandString constructs the command line used to generate the code
-func buildCommandString(types []string, outputName string) string {
+func buildCommandString(types []string) string {
 	var parts []string
 	parts = append(parts, "enumer")
 	parts = append(parts, fmt.Sprintf("-type=%s", strings.Join(types, ",")))
